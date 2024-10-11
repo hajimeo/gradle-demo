@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:m="http://ant.apache.org/ivy/maven">
+  <info organisation="org.sonatype.nexus.examples" module="simple-project" revision="1.0.0-SNAPSHOT" status="integration" publication="20210713111845"/>
+  <configurations>
+    <conf name="annotationProcessor" visibility="private"/>
+    <conf name="apiElements" visibility="private" extends="runtime"/>
+    <conf name="archives" visibility="public"/>
+    <conf name="compile" visibility="private"/>
+    <conf name="compileClasspath" visibility="private" extends="compileOnly,implementation"/>
+    <conf name="compileOnly" visibility="private"/>
+    <conf name="default" visibility="public" extends="runtimeElements"/>
+    <conf name="implementation" visibility="private" extends="compile"/>
+    <conf name="runtime" visibility="private" extends="compile"/>
+    <conf name="runtimeClasspath" visibility="private" extends="implementation,runtime,runtimeOnly"/>
+    <conf name="runtimeElements" visibility="private" extends="implementation,runtime,runtimeOnly"/>
+    <conf name="runtimeOnly" visibility="private"/>
+    <conf name="testAnnotationProcessor" visibility="private"/>
+    <conf name="testCompile" visibility="private" extends="compile"/>
+    <conf name="testCompileClasspath" visibility="private" extends="testCompileOnly,testImplementation"/>
+    <conf name="testCompileOnly" visibility="private"/>
+    <conf name="testImplementation" visibility="private" extends="implementation,testCompile"/>
+    <conf name="testRuntime" visibility="private" extends="runtime,testCompile"/>
+    <conf name="testRuntimeClasspath" visibility="private" extends="testImplementation,testRuntime,testRuntimeOnly"/>
+    <conf name="testRuntimeOnly" visibility="private" extends="runtimeOnly"/>
+  </configurations>
+  <publications>
+    <artifact name="simple-project" type="jar" ext="jar" conf="apiElements,archives,runtime,runtimeElements"/>
+  </publications>
+  <dependencies>
+    <dependency org="org.jbundle.util" name="org.jbundle.util.jbackup" rev="2.0.0" conf="compile-&gt;default"/>
+    <dependency org="net.sf.webtestfixtures" name="webtestfixtures" rev="2.0.1.3" conf="compile-&gt;default"/>
+    <dependency org="org.shoal" name="shoal-gms-api" rev="1.5.8" conf="compile-&gt;default"/>
+    <dependency org="org.ow2.util" name="util-i18n" rev="1.0.22" conf="compile-&gt;default"/>
+    <dependency org="com.sun.grizzly" name="grizzly-lzma" rev="1.9.19-beta5" conf="compile-&gt;default"/>
+    <dependency org="org.codehaus.sonar" name="sonar-squid" rev="2.9" conf="compile-&gt;default"/>
+    <dependency org="org.graniteds" name="granite-openjpa" rev="2.2.0.SP1" conf="compile-&gt;default"/>
+    <dependency org="org.apache.tomcat" name="tomcat-util" rev="7.0.0" conf="compile-&gt;default"/>
+    <dependency org="org.apache.camel" name="camel-http" rev="2.4.0" conf="compile-&gt;default"/>
+    <dependency org="org.apache.struts.xwork" name="xwork-core" rev="2.2.1" conf="compile-&gt;default"/>
+    <dependency org="org.jruby" name="jruby-complete" rev="1.1RC1" conf="compile-&gt;default"/>
+    <dependency org="org.jruby" name="jruby" rev="1.6.3" conf="compile-&gt;default"/>
+    <dependency org="org.mortbay.jetty" name="jetty" rev="6.1.16" conf="compile-&gt;default"/>
+    <dependency org="org.apache.derby" name="derby" rev="10.1.2.1" conf="compile-&gt;default"/>
+    <dependency org="org.springframework" name="spring-web" rev="3.1.1.RELEASE" conf="compile-&gt;default"/>
+    <dependency org="com.google.code.facebookapi" name="facebook-java-api" rev="3.0.4" conf="compile-&gt;default"/>
+    <dependency org="com.google.guava" name="guava" rev="12.0" conf="compile-&gt;default"/>
+    <dependency org="com.google.guava" name="guava-gwt" rev="12.0" conf="compile-&gt;default"/>
+    <dependency org="biz.littlej.jreqs" name="jreqs-guava" rev="0.1.1" conf="compile-&gt;default"/>
+    <dependency org="org.sonatype.sisu" name="sisu-ehcache" rev="1.1" conf="compile-&gt;default"/>
+    <dependency org="org.sonatype.sisu" name="sisu-xmlrpc-client" rev="1.2.0" conf="compile-&gt;default"/>
+    <dependency org="com.googlecode" name="kiama_2.8.1" rev="1.0.2" conf="compile-&gt;default"/>
+    <dependency org="com.googlecode" name="jyield" rev="0.0.6" conf="compile-&gt;default"/>
+    <dependency org="junit" name="junit" rev="3.8.1" conf="testCompile-&gt;default"/>
+  </dependencies>
+</ivy-module>

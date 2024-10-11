@@ -1,0 +1,2 @@
+org/sonatype/nexus/examples/App.java
+ org.sonatype.nexus.examples.App
